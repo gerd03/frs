@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warehouse Crude Monitoring & Fuel Requisition</title>
+    <title>Central Warehouse Crude Monitoring & Fuel Requisition Slip</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Fuel Requisition Slip & Central Warehouse Crude Monitoring</h1>
+        <h1>Central Warehouse Crude Monitoring & Fuel Requisition Slip</h1>
 
-        <!-- Input Section for User -->
+        <!-- Input Section -->
         <div class="input-section">
             <label for="startNumber">Enter Starting Number:</label>
             <input type="number" id="startNumber" placeholder="e.g., 51" />
@@ -24,16 +24,17 @@
             <button id="generate">Generate Output</button>
         </div>
 
-        <!-- Output Section -->
+        <!-- Fuel Requisition Slip Output -->
         <div class="output-section">
             <h2>Fuel Requisition Slip (Word Output)</h2>
             <textarea id="fuelOutput" readonly></textarea>
             <button onclick="copyToClipboard('fuelOutput')">Copy for Word</button>
-
-            <h2>Central Warehouse Crude Monitoring (Excel Output)</h2>
-            <textarea id="excelOutput" readonly></textarea>
-            <button onclick="copyToClipboard('excelOutput')">Copy for Excel</button>
         </div>
+
+        <!-- Central Warehouse Crude Monitoring Output -->
+        <h2>Central Warehouse Crude Monitoring (Excel Output)</h2>
+        <div id="warehouseOutputContainer"></div>
+
     </div>
 
     <script src="script.js"></script>
