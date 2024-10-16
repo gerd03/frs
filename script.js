@@ -17,15 +17,15 @@ document.getElementById('generate').addEventListener('click', function() {
     // Generate control numbers for the range
     let currentControl = controlStart;
     for (let i = startNumber; i <= endNumber; i++) {
-        // Create output box for every 25 control numbers
+        // Create output box for every 50 control numbers
         const outputBox = document.createElement('div');
         outputBox.className = 'output-box';
         
         let controlNumbers = '';
-        for (let j = 0; j < 50; j++) { // Each box contains 50 control numbers
+        for (let j = 0; j < 50; j++) {
             controlNumbers += currentControl + '\n';
             currentControl++;
-            if (j === 24) controlNumbers += '\n'; // Split each box at 25th number
+            if (j === 24) controlNumbers += '\n'; // Split every 25 control numbers
         }
 
         // Create textarea to display control numbers
