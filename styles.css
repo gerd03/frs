@@ -14,6 +14,55 @@ body {
     margin: auto;
     padding: 20px;
 }
+/* Classic Invitation Banner */
+.invitation-banner {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffc107;
+    color: #212529;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    opacity: 0;
+    animation: fadeInSlideDown 0.5s forwards;
+}
+
+.invitation-banner p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.invitation-banner button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.invitation-banner button:hover {
+    background-color: #218838;
+}
+
+@keyframes fadeInSlideDown {
+    from {
+        transform: translateX(-50%) translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
 
 .header {
     text-align: center;
