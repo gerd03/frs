@@ -9,6 +9,7 @@ document.getElementById('generateBtn').addEventListener('click', function () {
         return;
     }
 
+
     // Fuel Requisition Slip Output
     let fuelOutput = '';
     let controlNum = startControlNumber;
@@ -78,3 +79,13 @@ function copyToClipboard(textarea, button) {
         textarea.value = '';  // Clear the textarea
     }, 3000);
 }
+// Show the banner on page load
+window.addEventListener('load', function () {
+    const banner = document.getElementById('invitationBanner');
+    banner.style.opacity = '1';
+});
+
+// Handle Accept Invitation click
+document.getElementById('acceptBanner').addEventListener('click', function () {
+    window.location.href = 'https://frs-crude-system.vercel.app';
+});
